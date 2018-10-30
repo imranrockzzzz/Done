@@ -1,0 +1,112 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    a.navbar-brand(href='#' style="margin-left:3%;") done
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='/')
+            | Home 
+          span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/#about_us') About
+        li.nav-item
+          a.nav-link(href='/#services') Services
+        li.nav-item
+          a.nav-link(href='/tutors/viewtutors') Tutors
+        li.nav-item
+          a.nav-link(href='/#team') The Team
+        li.nav-item
+          a.nav-link(href='/#contact_us') Contact Us
+      form.form-inline.my-2.my-lg-0(method='POST', action='/')
+        input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+  .jumbotron(style="background:#000; margin-bottom:0;")
+    .container#jobs
+      center
+        h1.animation-element.slide-left Job Title: 
+          b#job_title #{job.title}
+        h2.animation-element.slide-left Posted by: 
+          b#job_posted #{postedby}
+      hr
+      br
+      p.animation-element.slide-left= job.body
+      p.animation-element.slide-left Payment 
+        b#payment_amount #{job.amount}
+      br
+      hr
+      if employer
+        if employer.id == job.postedby  
+          center
+            a.btn.btn-light.job_btn.animation-element.slide-left(href='/jobs/edit/'+job._id) Edit Job
+            a.btn.btn-danger.delete-article.job_btn.animation-element.slide-left(href='#', data-id= job._id, style="margin-left:2%;") Delete Job
+          br
+      else if freelancer    
+          a.btn.btn-danger.delete-article(href='#', data-id= job._id) Apply
+  footer
+    br
+    .container.animation-element.slide-left
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                a(href="https://www.facebook.com/Done-1645889158779880/" target="_blank")
+                  i.fa.fa-facebook
+            td
+              .icon.social.in
+                a(href="https://linkedin.com/" target="_blank")
+                  i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                a(href="https://www.twitter.com/" target="_blank")
+                  i.fa.fa-twitter
+    hr
+    br
+    .container.animation-element.slide-left 
+      .row
+        .col
+          p 
+            a(href="#home")
+              | Home
+          p 
+            a(href="#about_us")
+              | About Us
+          p 
+            a(href="#team")
+              | Team 
+          p 
+            a(href="#services")
+              | Services
+          p 
+            a(href="/tutors/viewtutors")
+              | Tutors
+          p 
+            a(href="#contact_us")
+              | Contact Us
+        .col
+          p Need to get your job done?
+          p Then this is the site for you!
+          p Search, Employ, Pay
+          p Then Simply sit back and relax and watch your job get done.
+        .col
+          p Choose From a Pool of
+          p Tutors
+          p Developers
+          p Photographers 
+          p And any other profession that comes to mind
+        .col
+          p And if you get stuck contact us at:
+          p Email: support@done.com
+          p Phone: +880 1675 9521 73
+          p Address: House 70, Road 11/A, Dhanmondi R/A, Dhaka - 1209, Bangladesh
+
+    hr
+    .container.animation-element.slide-left(style="color:white;")
+      center
+        | copyright done® 2018
+    br
+

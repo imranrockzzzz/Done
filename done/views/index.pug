@@ -1,0 +1,302 @@
+extends layout
+
+block content
+	nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+		a.navbar-brand(href='#' style="margin-left:3%;") done
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+		#navbarSupportedContent.collapse.navbar-collapse
+			ul.navbar-nav.mr-auto
+				li.nav-item.active
+					a.nav-link(href='#home')
+						| Home 
+					span.sr-only (current)
+				li.nav-item
+					a.nav-link(href='#about_us') About
+				li.nav-item
+					a.nav-link(href='#services') Services
+				li.nav-item
+					a.nav-link(href='/tutors/viewtutors') Tutors
+				li.nav-item
+					a.nav-link(href='#team') The Team
+				li.nav-item
+					a.nav-link(href='#contact_us') Contact Us
+			form.form-inline.my-2.my-lg-0(method='POST', action='/')
+				input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
+				button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+	.jumbotron(id="about_us")
+		.container
+			center
+				h1.animation-element.slide-left About Us 
+				hr
+				p.animation-element.slide-left
+					| Freelancing has become a buzz amongst students and individuals who don’t mind working a few hours to earn a littl alongside their studies/work. People of our country have to use an international platform if they ever require the help of a freelancer. Our solution, ‘done’, comes as a sign of relief for the people. Done provides user with the opportunity to find the perfect person for their work. ‘done’ serves as a bridge between talent and technology, hence providing the user with the best experience. Freelancers from a wide range of categories can be found through ‘done’, and hired for the specific task, ie.
+				p(id="aboutShow")
+					em
+						| Show More
+				p(id="about_us_2")
+					| A birthday party in the evening? Simply search for a photographer and book them for the event in the morning. Payment is secured as well as transactions happen only when the job is completed. Freelancers can breathe tension free as well, as the employer pays the amount to the system when hiring them. Students can also utilize our system to its full extent as they will be able to hire tutors for an urgent class/lecture, when they are running on a tight schedule.
+					span(id="showLess")
+						br
+						em
+							| Show Less
+	.jumbotron(id="team")
+		center
+			h1.animation-element.slide-left Presenting The Team
+			br
+			h5.animation-element.slide-left A group of specialized developers, designers and content creators have come together bringing in their respective talents from their fields to provide the consumers with what they deserve and need.
+			hr
+			br
+		.row(style="")
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/abrar.jpg", height=250)
+				br
+				br
+				h3 Abrar Hasin Kamal
+				h6 Backend Developer
+				p He is dynamic and is the person behind the ideas. Abrar mainly specializes with the backend portion of the application and is accoustomed to most backend languages used.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/abrar.hasin.37" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="www.linkedin.com/in/abrarh-kml" target="_blank")
+										i.fa.fa-linkedin
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/shadman.jpg", height=250)
+				br
+				br
+				h3 Shadman Fahim Ahmad
+				h6 Frontend Developer
+				p Shadman mainly specializes in the frontend development of the application, having a keen eye in designing and functionality he is considered to be the creative and responsive person of the team like his web applications.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/Shadman.ahmad.22" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="www.linkedin.com/in/shadman22" target="_blank")
+										i.fa.fa-linkedin
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/rawfun.jpg", height=250, width=250)
+				br
+				br
+				h3 Rawfun Hoque Niloy
+				h6 Junior Backend Developer
+				p Rawfun is the multi talented person of the group he aids both in the development of the backend of the application as well as the frontend.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/rawfun.haque" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="https://www.linkedin.com/in/rawfun-hoque-niloy-4b3100165/" target="_blank")
+										i.fa.fa-linkedin
+		br
+		.row
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/sojib.jpg", height=250)
+				br
+				br
+				h3 Shake Sadi Shojib
+				h6 Database Developer
+				p Sojib is the database guru of the team he is in charge of integrating the application with the noSQL database.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/odvut.99" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="https://www.linkedin.com/in/shake-sadi-sojib-a1b334152/" target="_blank")
+										i.fa.fa-linkedin
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/mostofa.jpg" height=250, width=250)
+				br
+				br
+				h3 Mostofa Kamal
+				h6 Graphics Designer
+				p Having worked with image designing applications previously Mostofa is the person behind the creative designs of the banners, logo and other images of the application.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/mostofa.cse" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="www.linkedin.com/in/mostofa-kamal-cse" target="_blank")
+										i.fa.fa-linkedin
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/imran.jpg" height=250, width=250)
+				br
+				br
+				h3 Md. Imran Hasan
+				h6 Junior Graphics Designer
+				p Having specialized in graphics designing multiple times before Imran aids in the design of banners and other images used in the application.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/imranrockzzzz" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="https://www.linkedin.com/in/md-imran-hasan-21a281123/" target="_blank")
+										i.fa.fa-linkedin
+			.col(style="text-align:center;").animation-element.slide-left
+				img.rounded-circle(src="/imgs/anjan.jpg" height=250, width=250)
+				br
+				br
+				h3 Anjan Sarkar
+				h6 Content Creator
+				p Leaning in on the literary side more Anjan specializes in creating the literature of the web application.
+				center
+					table
+						tr
+							td
+								.icon.social.fb
+									a(href="https://www.facebook.com/anjan.sarkar.54" target="_blank")
+										i.fa.fa-facebook
+							td
+								.icon.social.in
+									a(href="https://linkedin.com/" target="_blank")
+										i.fa.fa-linkedin
+	.jumbotron(id="services")
+		.container
+			center
+				h1.animation-element.slide-left Our Services
+				br
+				h7.animation-element.slide-left We being the only one of its kind in the country provide the following top-notch services to our clients with utter transperancy. Come have a look at what we offer and we can gaurantee that you too will join our community.
+				hr
+		.container
+			.row(style="margin-left:1%;")
+				.col-sm
+					.card(style="width:20rem;").animation-element.slide-left
+						img.card-img-top.animation-element.slide-left(src="/imgs/services_freelancer.png" alt="Freelancer" height=190)
+						.card-body
+							h5.card-title.animation-element.slide-left FREELANCERS
+							p.service-content.animation-element.slide-left Freelancers lack the proper platform for being employed, a place to exhibit their ideas and portfolios, done provides them that platform
+							button.btn.login-btn.animation-element.slide-left(type="button" data-toggle="collapse" data-target="#freelancerCollapse" aria-expanded="false" aria-controls="collapseExample") Show More
+				.col-sm
+					.card(style="width:20rem;")
+						img.card-img-top.animation-element.slide-left(src="/imgs/service_tutors.png" alt="Freelancer" height=190)
+						.card-body
+							h5.card-title.animation-element.slide-left TUTORS
+							p.service-content.animation-element.slide-left There has been a constant grit between tutors and parents, we provide parents the opportunity to choose the perfect tutor.
+							button.btn.login-btn.animation-element.slide-left(type="button" data-toggle="collapse" data-target="#tutorCollapse" aria-expanded="false" aria-controls="collapseExample") Show More
+				.col-sm
+					.card.animation-element.slide-left(style="width:20rem;")
+						img.card-img-top.animation-element.slide-left(src="/imgs/services_employers.jpg" alt="Freelancer" height=190)
+						.card-body
+							h5.card-title.animation-element.slide-left EMPLOYERS
+							p.service-content.animation-element.slide-left There has been a constant grit between tutors and parents, we provide parents the opportunity to choose the perfect tutor.
+							button.btn.login-btn.animation-element.slide-left(type="button" data-toggle="collapse" data-target="#employerCollapse" aria-expanded="false" aria-controls="collapseExample") Show More
+			br
+			.collapse(id="freelancerCollapse")
+				.card.card-body.content-card
+					h5.card-title More on Freelancers
+					hr
+					p Instead of bidding on jobs freelancers in this platform are chosen by their employers based on their ratings, experience and portfolios. They attain ratings from their past jobs and upload their portfolios to enrichen their profiles. Once the freelancer completes the task at hand they are paid by done.
+			br
+			.collapse(id="tutorCollapse")
+				.card.card-body.content-card
+					h5.card-title More on Tutors
+					hr
+					p Bridging the gap between parents and tutors done brings them the opportunity to choose and test their compatibility with each other, after the initial service fee has been paid the rest of the monthly payments are paid directly.
+			br
+			.collapse(id="employerCollapse")
+				.card.card-body.content-card
+					h5.card-title More on Employers
+					hr
+					p Employers are given the freedom to choose their own freelancers for their jobs. They are able to assess the freelancers based mainly on their portfolios and ratings. Once they assign a freelancer they first have to complete the payment to the company, the company holds the payment till the freelancer completes the job. Once the process is complete the employer must rate the freelancer.
+	.jumbotron(id="contact_us")
+		center
+			h2 Contact Us
+			hr
+		.row(style="margin-left:5%;")
+			.col.animation-element.slide-left
+				div(id="map")
+				script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDOCaOMfif19Q8M5G3mBXniecf8BW2PSl4&callback=initMap')
+			.col.animation-element.slide-left
+				div(class="fb-page" data-href="https://www.facebook.com/Done-1645889158779880/" data-tabs="timeline, messages" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="margin-left:6%;")
+					blockquote(cite="https://www.facebook.com/Done-1645889158779880/" class="fb-xfbml-parse-ignore")
+						a(href="https://www.facebook.com/Done-1645889158779880/")
+	footer
+		br
+		.container.animation-element.slide-left
+			center
+				table
+					tr
+						td
+							.icon.social.fb
+								a(href="https://www.facebook.com/Done-1645889158779880/" target="_blank")
+									i.fa.fa-facebook
+						td
+							.icon.social.in
+								a(href="https://linkedin.com/" target="_blank")
+									i.fa.fa-linkedin
+						td
+							.icon.social.tw
+								a(href="https://www.twitter.com/" target="_blank")
+									i.fa.fa-twitter
+		hr
+		br
+		.container.animation-element.slide-left 
+			.row
+				.col
+					p 
+						a(href="#home")
+							| Home
+					p 
+						a(href="#about_us")
+							| About Us
+					p 
+						a(href="#team")
+							| Team 
+					p 
+						a(href="#services")
+							| Services
+					p 
+						a(href="/tutors/viewtutors")
+							| Tutors
+					p 
+						a(href="#contact_us")
+							| Contact Us
+				.col
+					p Need to get your job done?
+					p Then this is the site for you!
+					p Search, Employ, Pay
+					p Then Simply sit back and relax and watch your job get done.
+				.col
+					p Choose From a Pool of
+					p Tutors
+					p Developers
+					p Photographers 
+					p And any other profession that comes to mind
+				.col
+					p And if you get stuck contact us at:
+					p Email: support@done.com
+					p Phone: +880 1675 9521 73
+					p Address: House 70, Road 11/A, Dhanmondi R/A, Dhaka - 1209, Bangladesh
+
+		hr
+		.container.animation-element.slide-left(style="color:white;")
+			center
+				| copyright done® 2018
+		br
+
